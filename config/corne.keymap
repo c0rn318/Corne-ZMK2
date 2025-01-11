@@ -49,10 +49,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q             &kp W        &kp F            &kp P               &kp B             &kp J      &kp L                &kp U                 &kp Y        &kp SEMI           &kp BSPC
-&kp TAB     &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S   &mt LEFT_COMMAND T  &kp G             &kp M      &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I  &mt RIGHT_SHIFT O  &kp SQT
-&kp DELETE  &kp X             &kp C        &kp D            &kp V               &kp Z             &kp K      &kp H                &kp COMMA             &kp DOT      &kp FSLH           &kp ENTER
-                                           &HML PLUS EQUAL  &mo 1               &kp LEFT_SHIFT    &kp SPACE  &lt 2 TAB            &HMR LS(MINUS) MINUS
+&kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND F      &mt DOLLAR P        &mt PERCENT B     &mt CARET J  &mt AMPERSAND L      &mt ASTERISK U        &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMI  &kp BSPC
+&kp TAB     &mt LEFT_SHIFT A   &mt LCTRL R    &mt LEFT_ALT S   &mt LEFT_COMMAND T  &kp G             &kp M        &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I             &mt RIGHT_SHIFT O           &kp SQT
+&kp DELETE  &kp X              &kp C          &kp D            &kp V               &kp Z             &kp K        &kp H                &kp COMMA             &kp DOT                 &kp FSLH                    &kp ENTER
+                                              &HML PLUS EQUAL  &mo 1               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
             >;
         };
 
