@@ -36,6 +36,69 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <36 37 38 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
         };
+
+        THTL: THTL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THTL";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        LYRS: LYRS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LYRS";
+            bindings = <&to>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        MLYRS: MLYRS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MLYRS";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-on-release;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        QWERTY {
+            bindings = <&to 7>;
+            key-positions = <1 2 3 4>;
+        };
+
+        Colemak_DH {
+            bindings = <&to 0>;
+            key-positions = <13 14 15 16>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <24 11>;
+        };
+
+        Reset {
+            bindings = <&sys_reset>;
+            key-positions = <1 2 3 4 7 8 10 9 39 38>;
+        };
     };
 
     keymap {
@@ -50,24 +113,24 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &HMR EXCLAMATION Q  &HMR AT_SIGN W  &HMR POUND F     &HMR DOLLAR P        &HMR PERCENT B    &HMR CARET J  &HMR AMPERSAND L      &HMR ASTERISK U       &HMR LEFT_PARENTHESIS Y  &HMR RIGHT_PARENTHESIS SEMI  &kp BSPC
-&kp TAB     &HMR LEFT_SHIFT A   &HMR LCTRL R    &HMR LEFT_ALT S  &HMR LEFT_COMMAND T  &kp G             &kp M         &HMR RIGHT_COMMAND N  &HMR RIGHT_ALT E      &HMR RCTRL I             &HMR RIGHT_SHIFT O           &kp SQT
-&kp DELETE  &kp X               &kp C           &kp D            &kp V                &kp Z             &kp K         &kp H                 &kp COMMA             &kp DOT                  &kp FSLH                     &kp ENTER
-                                                &to 1            &mo 0                &kp LEFT_SHIFT    &kp SPACE     &kp SPACE             &HMR LS(MINUS) MINUS
+&kp ESCAPE      &HMR EXCLAMATION Q  &HMR AT_SIGN W  &HMR POUND F     &HMR DOLLAR P        &HMR PERCENT B    &HMR CARET J  &HMR AMPERSAND L      &HMR ASTERISK U                  &HMR LEFT_PARENTHESIS Y  &HMR RIGHT_PARENTHESIS SEMI  &kp BSPC
+&kp TAB         &HMR LEFT_SHIFT A   &HMR LCTRL R    &HMR LEFT_ALT S  &HMR LEFT_COMMAND T  &kp G             &kp M         &HMR RIGHT_COMMAND N  &HMR RIGHT_ALT E                 &HMR RCTRL I             &HMR RIGHT_SHIFT O           &kp SQT
+&kp LEFT_SHIFT  &kp X               &kp C           &kp D            &kp V                &kp Z             &kp K         &kp H                 &kp COMMA                        &kp DOT                  &kp FSLH                     &HMR RG(RS(T)) RC(RS(T))
+                                                    &lt 1 DELETE     &kp ENTER            &MLYRS 5 2        &LYRS 4 1     &kp SPACE             &HMR LS(LG(NUMBER_4)) LS(LA(S))
             >;
         };
 
         NumPad {
             display-name = "Lower";
             bindings = <
-&lt 0 ESCAPE    &kp A     &kp F     &kp C_AC_COPY  &kp K_PASTE   &to 5               &mt HOME LESS_THAN    &kp N7                       &kp N8             &kp N9               &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
-&kp DELETE      &kp LEFT  &kp DOWN  &kt UP_ARROW   &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &HML RIGHT_COMMAND NUMBER_4  &HML RIGHT_ALT N5  &HML RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 3 DOLLAR
-&kp LEFT_SHIFT  &kp Z     &kp Y     &kp S          &kp LG(A)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                 &kp NUMBER_2       &kp NUMBER_3         &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
-                                    &kp LCTRL      &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE             &HML EQUAL N0                &kp TAB
+&kp ESCAPE                &HMR LG(F) LC(F)  &HMR LG(A) LC(A)  &HMR LG(C) LC(C)  &HMR LG(V) LC(V)  &HMR LG(X) LC(X)    &mt HOME LESS_THAN    &kp N7                       &kp N8             &kp N9               &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
+&HMR LG(LS(T)) LC(LS(T))  &kp LEFT          &kp DOWN          &kt UP_ARROW      &kp RIGHT         &kp BACKSPACE       &mt END GREATER_THAN  &HML RIGHT_COMMAND NUMBER_4  &HML RIGHT_ALT N5  &HML RCTRL NUMBER_6  &mt ASTRK PLUS   &THTL 2 DOLLAR
+&kp LEFT_SHIFT            &HMR LG(Z) LC(Z)  &HMR LG(Y) LC(Y)  &HMR LG(S) LC(S)  &HMR LG(P) LC(P)  &LYRS 6 0           &mt APOS PERIOD       &kp NUMBER_1                 &kp NUMBER_2       &kp NUMBER_3         &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+                                                              &kp LCTRL         &kp LEFT_ALT      &kp LEFT_COMMAND    &kp SPACE             &HML EQUAL N0                &kp TAB
             >;
         };
 
-        layer_5 {
+        Gaming {
             display-name = "Raise";
             bindings = <
 &kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6            &kp F7        &kp F8             &kp F9            &kp F10       &kp F11
@@ -102,13 +165,22 @@
             >;
         };
 
-        QWERTY {
-            display-name = "Base";
+        Arrow_Keys {
             bindings = <
-&kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND E     &mt DOLLAR R        &mt PERCENT T     &mt CARET Y  &mt AMPERSAND U      &mt ASTERISK I        &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P    &kp BSPC
-&kp TAB     &mt LEFT_SHIFT A   &mt LCTRL S    &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G             &kp H        &mt RIGHT_COMMAND J  &mt RIGHT_ALT K       &mt RCTRL L             &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp DELETE  &kp Z              &kp X          &kp C           &kp V               &kp B             &kp N        &kp M                &kp COMMA             &kp DOT                 &kp FSLH                   &kp ENTER
-                                              &kp CAPSLOCK    &to 0               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
+&trans  &trans          &trans     &trans        &trans            &trans    &trans  &trans    &trans    &trans        &trans     &trans
+&trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans          &trans     &trans        &trans            &trans    &trans  &trans    &trans    &trans        &trans     &trans
+                                   &trans        &trans            &trans    &trans  &trans    &trans
+            >;
+        };
+
+        QWERTY {
+            display-name = "QWERTY";
+            bindings = <
+&kp ESCAPE      &HMR EXCLAMATION Q  &HMR AT_SIGN W  &HMR POUND E     &HMR DOLLAR R        &HMR PERCENT T    &HMR CARET Y  &HMR AMPERSAND U      &HMR ASTERISK I                  &HMR LEFT_PARENTHESIS O  &HMR RIGHT_PARENTHESIS P    &kp BSPC
+&kp TAB         &HMR LEFT_SHIFT A   &HMR LCTRL S    &HMR LEFT_ALT D  &HMR LEFT_COMMAND F  &kp G             &kp H         &HMR RIGHT_COMMAND J  &HMR RIGHT_ALT K                 &HMR RCTRL L             &HMR RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z               &kp X           &kp C            &kp V                &kp B             &kp N         &kp M                 &kp COMMA                        &kp DOT                  &kp FSLH                    &HMR RG(RS(T)) RC(RS(T))
+                                                    &lt 1 DELETE     &kp ENTER            &MLYRS 5 2        &LYRS 4 1     &kp SPACE             &HMR LS(LG(NUMBER_4)) LS(LA(S))
             >;
         };
     };
