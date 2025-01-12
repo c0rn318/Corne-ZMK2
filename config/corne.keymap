@@ -53,33 +53,17 @@
 &kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND F     &mt DOLLAR P        &mt PERCENT B     &mt CARET J  &mt AMPERSAND L      &mt ASTERISK U        &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMI  &kp BSPC
 &kp TAB     &mt LEFT_SHIFT A   &mt LCTRL R    &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G             &kp M        &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I             &mt RIGHT_SHIFT O           &kp SQT
 &kp DELETE  &kp X              &kp C          &kp D           &kp V               &kp Z             &kp K        &kp H                &kp COMMA             &kp DOT                 &kp FSLH                    &kp ENTER
-                                              &kp CAPSLOCK    &mo 2               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
+                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
             >;
         };
 
         NumPad {
             display-name = "Lower";
             bindings = <
-&lt 0 ESCAPE    &kp LG(A)  &kp LC(A)  &kp K_COPY    &kp K_PASTE   &kp K_CUT           &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
-&kp DELETE      &kp LEFT   &kp DOWN   &kt UP_ARROW  &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &mt RIGHT_COMMAND NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 3 DOLLAR
-&kp LEFT_SHIFT  &kp LC(Z)  &kp LC(Y)  &kp LG(Z)     &kp LG(Y)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3        &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
-                                      &kp LCTRL     &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE             &mt EQUAL N0                &kp TAB
-            >;
-        };
-
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Lower";
-            bindings = <
-&kp KP_MULTIPLY       &kp MINUS      &mt AMPERSAND N7          &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &kp PLUS          &kp LS(LEFT_BRACKET)      &kp LS(RIGHT_BRACKET)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp SLASH             &kp BACKSPACE  &mt DOLLAR NUMBER_4       &mt PERCENT N5        &mt CARET NUMBER_6       &kp ENTER         &kp LS(LC(LG(LEFT_ALT)))  &kp LEFT               &kp DOWN              &kp UP_ARROW           &kp RIGHT_ARROW   &kp DOLLAR
-&kp NON_US_BACKSLASH  &kp N0         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3        &kp PERIOD        &kp LA(LS(MINUS))         &kp LS(LC(TAB))        &kp PAGE_DOWN         &kp PG_UP              &kp LC(TAB)       &kp TILDE
-                                                               &kp TILDE             &kp SPACE                &kp LEFT_SHIFT    &kp SPACE                 &kp LG(LS(LEFT))       &kp LS(LG(RIGHT))
+&lt 0 ESCAPE    &kp A     &kp F     &mt K_CUT K_COPY  &kp K_PASTE   &kp K_CUT           &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
+&kp DELETE      &kp LEFT  &kp DOWN  &kt UP_ARROW      &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &mt RIGHT_COMMAND NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 2 DOLLAR
+&kp LEFT_SHIFT  &kp Z     &kp Y     &kp S             &kp LG(Y)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3        &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+                                    &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE             &mt EQUAL N0                &kp TAB
             >;
         };
 
@@ -114,7 +98,7 @@
 &kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND E      &mt DOLLAR R        &mt PERCENT T     &mt CARET Y  &mt AMPERSAND U      &mt ASTERISK I        &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P    &kp BSPC
 &kp TAB     &mt LEFT_SHIFT A   &mt LCTRL S    &mt LEFT_ALT D   &mt LEFT_COMMAND F  &kp G             &kp H        &mt RIGHT_COMMAND J  &mt RIGHT_ALT K       &mt RCTRL L             &mt RIGHT_SHIFT SEMICOLON  &kp SQT
 &kp DELETE  &kp Z              &kp X          &kp C            &kp V               &kp B             &kp N        &kp M                &kp COMMA             &kp DOT                 &kp FSLH                   &kp ENTER
-                                              &HML PLUS EQUAL  &mo 2               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
+                                              &HML PLUS EQUAL  &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
             >;
         };
     };
