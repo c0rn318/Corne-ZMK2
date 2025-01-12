@@ -50,10 +50,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND F     &mt DOLLAR P        &mt PERCENT B     &mt CARET J  &mt AMPERSAND L      &mt ASTERISK U        &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMI  &kp BSPC
-&kp TAB     &mt LEFT_SHIFT A   &mt LCTRL R    &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G             &kp M        &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I             &mt RIGHT_SHIFT O           &kp SQT
-&kp DELETE  &kp X              &kp C          &kp D           &kp V               &kp Z             &kp K        &kp H                &kp COMMA             &kp DOT                 &kp FSLH                    &kp ENTER
-                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
+&kp ESCAPE  &HMR EXCLAMATION Q  &HMR AT_SIGN W  &HMR POUND F    &HML DOLLAR P       &HML PERCENT B    &HML CARET J  &HML AMPERSAND L     &HMR ASTERISK U       &HMR LEFT_PARENTHESIS Y  &HMR RIGHT_PARENTHESIS SEMI  &kp BSPC
+&kp TAB     &mt LEFT_SHIFT A    &mt LCTRL R     &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G             &kp M         &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I              &mt RIGHT_SHIFT O            &kp SQT
+&kp DELETE  &kp X               &kp C           &kp D           &kp V               &kp Z             &kp K         &kp H                &kp COMMA             &kp DOT                  &kp FSLH                     &kp ENTER
+                                                &lt 1 CAPSLOCK  &mo 0               &kp LEFT_SHIFT    &kp SPACE     &kp SPACE            &HMR LS(MINUS) MINUS
             >;
         };
 
