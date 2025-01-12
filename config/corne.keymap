@@ -60,7 +60,7 @@
         NumPad {
             display-name = "Lower";
             bindings = <
-&lt 0 ESCAPE    &kp A     &kp F     &mt K_CUT K_COPY  &kp K_PASTE   &kp K_CUT           &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
+&lt 0 ESCAPE    &kp A     &kp F     &mt K_CUT K_COPY  &kp K_PASTE   &to 4               &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
 &kp DELETE      &kp LEFT  &kp DOWN  &kt UP_ARROW      &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &mt RIGHT_COMMAND NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 2 DOLLAR
 &kp LEFT_SHIFT  &kp Z     &kp Y     &kp S             &kp LG(Y)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3        &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
                                     &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE             &mt EQUAL N0                &kp TAB
