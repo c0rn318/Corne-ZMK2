@@ -53,17 +53,27 @@
 &kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND F     &mt DOLLAR P        &mt PERCENT B     &mt CARET J  &mt AMPERSAND L      &mt ASTERISK U        &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMI  &kp BSPC
 &kp TAB     &mt LEFT_SHIFT A   &mt LCTRL R    &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G             &kp M        &mt RIGHT_COMMAND N  &mt RIGHT_ALT E       &mt RCTRL I             &mt RIGHT_SHIFT O           &kp SQT
 &kp DELETE  &kp X              &kp C          &kp D           &kp V               &kp Z             &kp K        &kp H                &kp COMMA             &kp DOT                 &kp FSLH                    &kp ENTER
-                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
+                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
             >;
         };
 
         NumPad {
             display-name = "Lower";
             bindings = <
-&lt 0 ESCAPE    &kp A     &kp F     &mt K_CUT K_COPY  &kp K_PASTE   &to 4               &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
-&kp DELETE      &kp LEFT  &kp DOWN  &kt UP_ARROW      &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &mt RIGHT_COMMAND NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 2 DOLLAR
-&kp LEFT_SHIFT  &kp Z     &kp Y     &kp S             &kp LG(Y)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3        &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+&lt 0 ESCAPE    &kp A     &kp F     &mt K_CUT K_COPY  &kp K_PASTE   &to 5               &mt HOME LESS_THAN    &kp N7                      &kp N8            &kp N9              &mt SLASH MINUS  &mt RIGHT_BRACKET LEFT_BRACKET
+&kp DELETE      &kp LEFT  &kp DOWN  &kt UP_ARROW      &kp RIGHT     &kp BACKSPACE       &mt END GREATER_THAN  &mt RIGHT_COMMAND NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &mt ASTRK PLUS   &lt 3 DOLLAR
+&kp LEFT_SHIFT  &kp Z     &kp Y     &kp S             &kp LG(A)     &kp DELETE          &mt APOS PERIOD       &kp NUMBER_1                &kp NUMBER_2      &kp NUMBER_3        &kp ENTER        &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
                                     &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE             &mt EQUAL N0                &kp TAB
+            >;
+        };
+
+        layer_5 {
+            display-name = "Raise";
+            bindings = <
+&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6            &kp F7        &kp F8             &kp F9            &kp F10       &kp F11
+&trans   &trans  &trans  &trans  &trans  &trans    &trans            &kp C_PREV    &kp K_VOLUME_DOWN  &kp LS(K_VOL_UP)  &kp C_NEXT    &kp GRAVE
+&trans   &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_CLR
+                         &trans  &trans  &trans    &kp C_PLAY_PAUSE  &trans        &kp C_MUTE
             >;
         };
 
@@ -98,7 +108,7 @@
 &kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND E     &mt DOLLAR R        &mt PERCENT T     &mt CARET Y  &mt AMPERSAND U      &mt ASTERISK I        &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P    &kp BSPC
 &kp TAB     &mt LEFT_SHIFT A   &mt LCTRL S    &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G             &kp H        &mt RIGHT_COMMAND J  &mt RIGHT_ALT K       &mt RCTRL L             &mt RIGHT_SHIFT SEMICOLON  &kp SQT
 &kp DELETE  &kp Z              &kp X          &kp C           &kp V               &kp B             &kp N        &kp M                &kp COMMA             &kp DOT                 &kp FSLH                   &kp ENTER
-                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
+                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 3 TAB            &HMR LS(MINUS) MINUS
             >;
         };
     };
