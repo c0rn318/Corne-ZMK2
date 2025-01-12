@@ -95,10 +95,10 @@
         QWERTY {
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND E      &mt DOLLAR R        &mt PERCENT T     &mt CARET Y  &mt AMPERSAND U      &mt ASTERISK I        &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P    &kp BSPC
-&kp TAB     &mt LEFT_SHIFT A   &mt LCTRL S    &mt LEFT_ALT D   &mt LEFT_COMMAND F  &kp G             &kp H        &mt RIGHT_COMMAND J  &mt RIGHT_ALT K       &mt RCTRL L             &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp DELETE  &kp Z              &kp X          &kp C            &kp V               &kp B             &kp N        &kp M                &kp COMMA             &kp DOT                 &kp FSLH                   &kp ENTER
-                                              &HML PLUS EQUAL  &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
+&kp ESCAPE  &mt EXCLAMATION Q  &mt AT_SIGN W  &mt POUND E     &mt DOLLAR R        &mt PERCENT T     &mt CARET Y  &mt AMPERSAND U      &mt ASTERISK I        &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P    &kp BSPC
+&kp TAB     &mt LEFT_SHIFT A   &mt LCTRL S    &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G             &kp H        &mt RIGHT_COMMAND J  &mt RIGHT_ALT K       &mt RCTRL L             &mt RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp DELETE  &kp Z              &kp X          &kp C           &kp V               &kp B             &kp N        &kp M                &kp COMMA             &kp DOT                 &kp FSLH                   &kp ENTER
+                                              &kp CAPSLOCK    &mo 0               &kp LEFT_SHIFT    &kp SPACE    &lt 2 TAB            &HMR LS(MINUS) MINUS
             >;
         };
     };
