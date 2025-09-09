@@ -75,12 +75,6 @@
             key-positions = <5 0 37 40 6 11>;
             layers = <4>;
         };
-
-        B2B {
-            bindings = <&to 0>;
-            key-positions = <38 39>;
-            layers = <4>;
-        };
     };
 
     keymap {
@@ -124,10 +118,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none     &kp ESCAPE    &kp BACKSPACE  &kp N7               &kp N8        &kp N9                &mt PG_UP PAGE_DOWN   &kt N7              &kp N8             &kp NUMBER_9         &kp BACKSPACE    &kp DELETE
-&none     &kp UP_ARROW  &kp ENTER      &HMR LCTRL NUMBER_4  &HMR LALT N5  &HMR LGUI NUMBER_6    &mt HOME END          &HMR RGUI NUMBER_4  &HMR RIGHT_ALT N5  &HMR RCTRL NUMBER_6  &mt APOS PERIOD  &mo 3
-&kp LEFT  &kp DOWN      &kp RIGHT      &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3          &mt LESS_THAN ESCAPE  &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3         &kp ENTER        &mt RIGHT_BRACKET LEFT_BRACKET
-                                       &to 0                &kp N0        &kp LEFT_SHIFT        &mt LEFT_SHIFT SPACE  &HMR EQUAL N0       &kp TAB
+&none     &kp ESCAPE    &kp BACKSPACE          &kp N7               &kp N8        &kp N9                &mt PG_UP PAGE_DOWN   &kp N7              &kp N8             &kp NUMBER_9         &kp BACKSPACE  &kp DELETE
+&kp TAB   &kp UP_ARROW  &HMR LEFT_SHIFT ENTER  &HMR LCTRL NUMBER_4  &HMR LALT N5  &HMR LGUI NUMBER_6    &mt HOME END          &HMR RGUI NUMBER_4  &HMR RIGHT_ALT N5  &HMR RCTRL NUMBER_6  &kp MINUS      &mo 3
+&kp LEFT  &kp DOWN      &kp RIGHT              &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3          &mt LESS_THAN ESCAPE  &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3         &kp ENTER      &mt RIGHT_BRACKET LEFT_BRACKET
+                                               &to 0                &kp N0        &kp LEFT_SHIFT        &mt MINUS SPACE       &HMR EQUAL N0       &HMR SQT PERIOD
             >;
         };
 
@@ -153,7 +147,7 @@
 &none           &none         &none         &none         &none         &none           &none  &kp C_VOL_UP  &kp C_NEXT  &none                 &none                 &none
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &kp C_VOL_DN  &kp C_PREV  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none           &none  &kp C_MUTE    &kp C_PP    &none                 &none                 &none
-                                            &none         &none         &none           &none  &none         &none
+                                            &to 3         &to 0         &to 2           &none  &none         &none
             >;
 
             label = "Med";
