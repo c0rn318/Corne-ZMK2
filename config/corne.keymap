@@ -75,6 +75,11 @@
             key-positions = <5 0 37 40 6 11>;
             layers = <4>;
         };
+
+        Calc {
+            bindings = <&kp C_AL_CALCULATOR>;
+            key-positions = <12 23>;
+        };
     };
 
     keymap {
