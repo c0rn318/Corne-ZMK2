@@ -149,5 +149,14 @@
                                                       &lt 1 DELETE     &kp ENTER            &LYRS 2 1         &HMR LG(LA(LC(A))) LC(LA(DELETE))  &kp SPACE             &HMR LS(LG(LC(NUMBER_4))) LS(LA(S))
             >;
         };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
