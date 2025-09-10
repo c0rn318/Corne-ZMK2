@@ -28,6 +28,8 @@
             label = "SCW";
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <175>;
         };
 
         SML: SML {
@@ -73,7 +75,7 @@
         Reset {
             bindings = <&sys_reset>;
             key-positions = <5 0 37 40 6 11>;
-            layers = <4>;
+            layers = <5>;
         };
 
         Calc {
@@ -95,10 +97,20 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&HMR TILDE ESC  &HMR NUMBER_1 Q  &HMR NUMBER_2 W  &HMR NUMBER_3 E  &HMR NUMBER_4 R  &HMR N5 T                              &HMR NUMBER_6 Y                    &HMR N7 U    &HMR N8 I    &HMR N9 O     &HMR N0 P             &kp BSPC
-&kp TAB         &HMR LSHFT A     &HMR LCTRL S     &HMR LALT D      &HMR LGUI F      &kp G                                  &kp H                              &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR BACKSLASH SQT
-&SCW            &kp Z            &kp X            &kp C            &kp V            &kp B                                  &kp N                              &kp M        &kp COMMA    &kp DOT       &kp FSLH              &PHTL 4 DELETE
-                                                  &SML 2 1         &kp ENTER        &HMR LS(LG(LC(NUMBER_4))) LS(LA(S))    &HMR LG(LA(LC(A))) LC(LA(DELETE))  &kp SPACE    &TML 3 2
+&HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R        &kp T                                  &kp Y                              &kp U        &kp I        &kp O         &kp P                 &kp BSPC
+&kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F  &kp G                                  &kp H                              &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR BACKSLASH SQT
+&SCW            &kp Z         &kp X         &kp C        &kp V        &kp B                                  &kp N                              &kp M        &kp COMMA    &kp DOT       &kp FSLH              &PHTL 5 DELETE
+                                            &SML 1 2     &kp ENTER    &HMR LS(LG(LC(NUMBER_4))) LS(LA(S))    &HMR LG(LA(LC(A))) LC(LA(DELETE))  &kp SPACE    &TML 4 3
+            >;
+        };
+
+        NumberRow {
+            label = "Num_Row";
+            bindings = <
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6    &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -123,10 +135,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none     &kp ESCAPE    &kp BACKSPACE          &kp N7               &kp N8        &kp N9                &mt PG_UP PAGE_DOWN   &kp N7              &kp N8             &kp NUMBER_9         &kp BACKSPACE  &kp DELETE
-&kp TAB   &kp UP_ARROW  &HMR LEFT_SHIFT ENTER  &HMR LCTRL NUMBER_4  &HMR LALT N5  &HMR LGUI NUMBER_6    &mt HOME END          &HMR RGUI NUMBER_4  &HMR RIGHT_ALT N5  &HMR RCTRL NUMBER_6  &kp MINUS      &mo 3
-&kp LEFT  &kp DOWN      &kp RIGHT              &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3          &mt LESS_THAN ESCAPE  &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3         &kp ENTER      &mt RIGHT_BRACKET LEFT_BRACKET
-                                               &to 0                &kp N0        &kp LEFT_SHIFT        &mt MINUS SPACE       &HMR EQUAL N0       &HMR SQT PERIOD
+&kp ESCAPE                      &kp BACKSPACE          &kp N7                      &kp N8            &kp N9                  &HMR LG(A) LC(A)        &mt PG_UP PAGE_DOWN  &kp N7              &kp N8             &kp NUMBER_9         &kp BACKSPACE     &kp DELETE
+&kp TAB                         &HMR LEFT_SHIFT MINUS  &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &HMR LC(X) LC(C)        &mt HOME END         &HMR RGUI NUMBER_4  &HMR RIGHT_ALT N5  &HMR RCTRL NUMBER_6  &HMR RSHFT MINUS  &mo 4
+&mt RIGHT_BRACKET LEFT_BRACKET  &kp ENTER              &kp N1                      &kp N2            &kp N3                  &HMR LC(LS(V)) LC(V)    &kp ESCAPE           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3         &kp ENTER         &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+                                                                                   &kp PERIOD        &kp N0                  &to 0                   &kp SLASH            &kp N0              &kp DOT
             >;
         };
 
@@ -140,10 +152,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none  &none     &kp UP      &none          &none            &trans  &trans  &trans  &trans  &trans  &trans
-&none  &none  &kp LEFT  &kp DOWN    &kp RIGHT      &none            &trans  &trans  &trans  &trans  &trans  &trans
-&none  &none  &none     &none       &none          &none            &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp DELETE  &mt TAB ENTER  &kp BACKSPACE    &trans  &trans  &trans
+&none  &none  &none     &kp UP      &none          &none            &trans  &trans     &trans  &trans  &trans  &trans
+&none  &none  &kp LEFT  &kp DOWN    &kp RIGHT      &none            &trans  &trans     &trans  &trans  &trans  &trans
+&none  &none  &none     &none       &none          &none            &trans  &trans     &trans  &trans  &trans  &trans
+                        &kp DELETE  &mt TAB ENTER  &kp BACKSPACE    &trans  &kp SPACE  &trans
             >;
         };
 
@@ -152,7 +164,7 @@
 &none           &none         &none         &none         &none         &none           &none  &kp C_VOL_UP  &kp C_NEXT  &none                 &none                 &none
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &kp C_VOL_DN  &kp C_PREV  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none           &none  &kp C_MUTE    &kp C_PP    &none                 &none                 &none
-                                            &to 3         &to 0         &to 2           &none  &none         &none
+                                            &to 4         &to 0         &to 3           &none  &none         &none
             >;
 
             label = "Med";
