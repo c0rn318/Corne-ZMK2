@@ -82,6 +82,18 @@
             bindings = <&kp C_AL_CALCULATOR>;
             key-positions = <12 23>;
         };
+
+        Gamer {
+            bindings = <&to 6>;
+            key-positions = <0 24 11 35>;
+            layers = <0>;
+        };
+
+        Revert {
+            bindings = <&to 0>;
+            key-positions = <0 24 11 35>;
+            layers = <6>;
+        };
     };
 
     keymap {
@@ -168,6 +180,15 @@
             >;
 
             label = "Med";
+        };
+
+        Gaming {
+            bindings = <
+&kp F4  &kp F1   &none  &kp W  &none   &none     &none            &kp F10  &kp F11  &kp F12  &none   &none
+&none   &kp ESC  &kp A  &kp S  &kp D   &kp F5    &kp C_VOLUME_UP  &kp F6   &kp F7   &kp F8   &kp F9  &kp C_BRIGHTNESS_INC
+&none   &none    &none  &none  &none   &none     &kp C_VOL_DN     &none    &none    &none    &none   &kp C_BRIGHTNESS_DEC
+                        &none  &kp F2  &kp F3    &none            &none    &none
+            >;
         };
     };
 };
