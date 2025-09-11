@@ -92,7 +92,7 @@
         Revert {
             bindings = <&to 0>;
             key-positions = <0 24 11 35>;
-            layers = <5>;
+            layers = <5 6 7>;
         };
 
         Delete {
@@ -103,28 +103,25 @@
         Equals {
             bindings = <&kp EQUAL>;
             key-positions = <13 14>;
+            layers = <0 2 3>;
         };
 
         Open_Par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <14 15>;
+            layers = <0 2 3>;
         };
 
         Close_Par {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <15 16>;
+            layers = <0 2 3>;
         };
 
         List {
             bindings = <&kp LA(DOWN)>;
             key-positions = <15 20>;
             layers = <0 2>;
-        };
-
-        Chart {
-            bindings = <&kp LA(F1)>;
-            key-positions = <20 6>;
-            layers = <2>;
         };
     };
 
