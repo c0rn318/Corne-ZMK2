@@ -27,7 +27,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SCW";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
 
             tapping-term-ms = <175>;
         };
@@ -75,7 +75,7 @@
         Reset {
             bindings = <&sys_reset>;
             key-positions = <5 0 37 40 6 11>;
-            layers = <5>;
+            layers = <4>;
         };
 
         Calc {
@@ -84,7 +84,7 @@
         };
 
         Gamer {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <0 24 11 35>;
             layers = <0>;
         };
@@ -92,7 +92,39 @@
         Revert {
             bindings = <&to 0>;
             key-positions = <0 24 11 35>;
-            layers = <6>;
+            layers = <5>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <24 11>;
+        };
+
+        Equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <13 14>;
+        };
+
+        Open_Par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <14 15>;
+        };
+
+        Close_Par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <15 16>;
+        };
+
+        List {
+            bindings = <&kp LA(DOWN)>;
+            key-positions = <15 20>;
+            layers = <0 2>;
+        };
+
+        Chart {
+            bindings = <&kp LA(F1)>;
+            key-positions = <20 6>;
+            layers = <2>;
         };
     };
 
@@ -100,7 +132,7 @@
         compatible = "zmk,keymap";
 
         Base {
-            display-name = "Default";
+            display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -109,29 +141,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R        &kp T                                  &kp Y                              &kp U        &kp I        &kp O         &kp P                 &kp BSPC
-&kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F  &kp G                                  &kp H                              &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR BACKSLASH SQT
-&SCW            &kp Z         &kp X         &kp C        &kp V        &kp B                                  &kp N                              &kp M        &kp COMMA    &kp DOT       &kp FSLH              &PHTL 5 DELETE
-                                            &SML 1 2     &kp ENTER    &HMR LS(LG(LC(NUMBER_4))) LS(LA(S))    &HMR LG(LA(LC(A))) LC(LA(DELETE))  &kp SPACE    &TML 4 3
-            >;
-        };
-
-        NumberRow {
-            label = "Num_Row";
-            bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6    &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O         &kp P                 &kp BSPC
+&kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F  &kp G    &kp H  &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR EQUAL SQT
+&SCW            &kp Z         &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
+                                            &SML 2 1     &lt 1 ENTER  &none    &none  &lt 3 SPACE  &TML 3 2
             >;
         };
 
         Function {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &none   &none   &none   &none   &kp F11    &kp F12  &none   &none   &none   &none    &none
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none  &none   &none   &none   &none   &none      &none    &none   &none   &none   &none    &none
+                       &none   &none   &none      &none    &none   &none
             >;
 
             label = "FN";
@@ -147,10 +169,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE                      &kp BACKSPACE          &kp N7                      &kp N8            &kp N9                  &HMR LG(A) LC(A)        &mt PG_UP PAGE_DOWN  &kp N7              &kp N8             &kp NUMBER_9         &kp BACKSPACE     &kp DELETE
-&kp TAB                         &HMR LEFT_SHIFT MINUS  &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &HMR LC(X) LC(C)        &mt HOME END         &HMR RGUI NUMBER_4  &HMR RIGHT_ALT N5  &HMR RCTRL NUMBER_6  &HMR RSHFT MINUS  &mo 4
-&mt RIGHT_BRACKET LEFT_BRACKET  &kp ENTER              &kp N1                      &kp N2            &kp N3                  &HMR LC(LS(V)) LC(V)    &kp ESCAPE           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3         &kp ENTER         &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
-                                                                                   &kp PERIOD        &kp N0                  &to 0                   &kp SLASH            &kp N0              &kp DOT
+&kp ESCAPE      &kp LG(LS(S))              &kp N7                      &kp N8            &kp N9                  &HMR LG(A) LC(A)     &kp F2              &kp F3                           &kp F4               &kp F5            &kp EQUAL             &kp BACKSPACE
+&kp TAB         &kp N0                     &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &HMR LC(X) LC(C)     &mt PAGE_UP HOME    &kp RIGHT_COMMAND                &HMR RIGHT_ALT PLUS  &HMR RCTRL MINUS  &HMR RSHFT SEMICOLON  &kp SQT
+&sk LEFT_SHIFT  &HMR C_AC_PRINT LC(LS(L))  &kp N1                      &kp N2            &kp N3                  &HMR INSERT LC(V)    &HMR PAGE_DOWN END  &HMR RIGHT_BRACKET LEFT_BRACKET  &kp COMMA            &kp PERIOD        &kp SLASH             &kp BACKSLASH
+                                                                       &to 0             &kp RETURN              &HMR LG(D) LC(D)     &kp F1              &kp SPACE                        &to 3
             >;
         };
 
@@ -164,10 +186,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none  &none     &kp UP      &none          &none            &trans  &trans     &trans  &trans  &trans  &trans
-&none  &none  &kp LEFT  &kp DOWN    &kp RIGHT      &none            &trans  &trans     &trans  &trans  &trans  &trans
-&none  &none  &none     &none       &none          &none            &trans  &trans     &trans  &trans  &trans  &trans
-                        &kp DELETE  &mt TAB ENTER  &kp BACKSPACE    &trans  &kp SPACE  &trans
+&kp ESCAPE      &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &none     &trans  &kp C_AL_SPREADSHEET  &kp C_AL_WORD  &kp C_AL_FILE_BROWSER  &kp C_AL_WWW     &kp BACKSPACE
+&kp TAB         &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F8    &trans  &kp RIGHT_GUI         &kp RIGHT_ALT  &kp RCTRL              &kp RIGHT_SHIFT  &to 2
+&kp LEFT_SHIFT  &none          &none     &none     &none      &none     &trans  &trans                &trans         &trans                 &trans           &trans
+                                         &to 0     &kp ENTER  &none     &trans  &kp SPACE             &to 2
             >;
         };
 
@@ -176,7 +198,7 @@
 &none           &none         &none         &none         &none         &none           &none  &kp C_VOL_UP  &kp C_NEXT  &none                 &none                 &none
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &kp C_VOL_DN  &kp C_PREV  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &none
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none           &none  &kp C_MUTE    &kp C_PP    &none                 &none                 &none
-                                            &to 4         &to 0         &to 3           &none  &none         &none
+                                            &to 3         &to 0         &to 2           &none  &none         &none
             >;
 
             label = "Med";
@@ -187,7 +209,27 @@
 &kp F4  &kp F1   &none  &kp W  &none   &none     &none            &kp F10  &kp F11  &kp F12  &none   &none
 &none   &kp ESC  &kp A  &kp S  &kp D   &kp F5    &kp C_VOLUME_UP  &kp F6   &kp F7   &kp F8   &kp F9  &kp C_BRIGHTNESS_INC
 &none   &none    &none  &none  &none   &none     &kp C_VOL_DN     &none    &none    &none    &none   &kp C_BRIGHTNESS_DEC
-                        &none  &kp F2  &kp F3    &none            &none    &none
+                        &none  &kp F2  &kp F3    &none            &to 6    &none
+            >;
+        };
+
+        Gaming2 {
+            display-name = "Game_Type";
+            bindings = <
+&HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O         &kp P                 &kp BSPC
+&kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F  &kp G    &kp H  &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR EQUAL SQT
+&SCW            &kp Z         &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
+                                            &to 5        &kp ENTER    &none    &none  &kp SPACE    &to 7
+            >;
+        };
+
+        Gaming3 {
+            label = "Game_Num";
+            bindings = <
+&kp ESC  &none   &kp N7  &kp N8  &kp N9     &none    &none  &none      &none  &none  &none  &kp BSPC
+&none    &kp N0  &kp N4  &kp N5  &kp N6     &none    &none  &none      &none  &none  &none  &none
+&none    &none   &kp N1  &kp N2  &kp N3     &none    &none  &none      &none  &none  &none  &none
+                         &to 5   &kp ENTER  &none    &none  &kp SPACE  &to 6
             >;
         };
     };
