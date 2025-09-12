@@ -27,9 +27,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SCW";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
 
-            tapping-term-ms = <175>;
+            tapping-term-ms = <250>;
         };
 
         TML: TML {
@@ -49,6 +49,8 @@
             label = "TD";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp LEFT_PARENTHESIS>;
+
+            tapping-term-ms = <230>;
         };
 
         THTL: THTL {
@@ -122,7 +124,7 @@
             bindings = <
 &HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R          &kp T    &kp Y     &kp U          &kp I        &kp O         &kp P                 &kp BSPC
 &kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F    &kp G    &kp H     &HMR RGUI J    &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR EQUAL SQT
-&sk LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V          &kp B    &kp N     &kp M          &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
+&SCW            &kp Z         &kp X         &kp C        &kp V          &kp B    &kp N     &kp M          &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
                                             &sl 1        &THTL 4 ENTER  &TD      &TML 2 3  &THTL 2 SPACE  &to 5
             >;
         };
@@ -148,7 +150,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp LG(LS(S))       &kp N7                      &kp N8            &kp N9                  &none               &kp RC(A)              &none                     &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp ESCAPE      &kp LG(LS(S))       &kp N7                      &kp N8            &kp N9                  &kp LC(A)           &none                  &none                     &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
 &kp TAB         &HMR LEFT_SHIFT N0  &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &kp LC(LS(L))       &HMR RC(X) RC(C)       &HMR RIGHT_COMMAND EQUAL  &HMR RIGHT_ALT PLUS  &HMR RCTRL MINUS      &HMR RSHFT SEMICOLON   &kp SQT
 &sk LEFT_SHIFT  &none               &kp N1                      &kp N2            &kp N3                  &kp LA(DOWN)        &HMR INSERT LC(RC(V))  &none                     &kp COMMA            &kp PERIOD            &kp SLASH              &none
                                                                 &sl 1             &THTL 4 ENTER           &HMR LG(D) LC(D)    &to 3                  &THTL 0 SPACE             &to 5
