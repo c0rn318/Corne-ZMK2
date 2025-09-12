@@ -124,7 +124,7 @@
             bindings = <
 &HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R          &kp T    &kp Y     &kp U          &kp I        &kp O         &kp P                 &kp BSPC
 &kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F    &kp G    &kp H     &HMR RGUI J    &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR EQUAL SQT
-&SCW            &kp Z         &kp X         &kp C        &kp V          &kp B    &kp N     &kp M          &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
+&sk LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V          &kp B    &kp N     &kp M          &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
                                             &sl 1        &THTL 4 ENTER  &TD      &TML 2 3  &THTL 2 SPACE  &to 5
             >;
         };
