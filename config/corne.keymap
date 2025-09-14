@@ -95,18 +95,6 @@
             bindings = <&kp DELETE>;
             key-positions = <24 11>;
         };
-
-        Equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <21 22>;
-            layers = <0 2 3>;
-        };
-
-        List {
-            bindings = <&kp LA(LS(DOWN))>;
-            key-positions = <15 20 22>;
-            layers = <0 2>;
-        };
     };
 
     keymap {
