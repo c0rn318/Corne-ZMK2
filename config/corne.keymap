@@ -32,18 +32,6 @@
             tapping-term-ms = <250>;
         };
 
-        TML: TML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TML";
-            bindings = <&mo>, <&to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-        };
-
         TD: TD {
             compatible = "zmk,behavior-tap-dance";
             label = "TD";
@@ -51,17 +39,6 @@
             bindings = <&to 2>, <&to 3>;
 
             tapping-term-ms = <230>;
-        };
-
-        THTL: THTL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THTL";
-            bindings = <&to>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
         };
     };
 
@@ -138,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp LG(LS(S))       &kp N7                      &kp N8            &kp N9                  &kp LC(A)        &none                  &none                     &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
-&kp TAB         &HMR LEFT_SHIFT N0  &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &kp LC(LS(L))    &HMR RC(X) RC(C)       &HMR RIGHT_COMMAND EQUAL  &HMR RIGHT_ALT PLUS  &HMR RCTRL MINUS      &HMR RSHFT SEMICOLON   &kp SQT
-&sk LEFT_SHIFT  &kp LC(D)           &kp N1                      &kp N2            &kp N3                  &kp LA(DOWN)     &HMR INSERT LC(RC(V))  &none                     &kp COMMA            &kp PERIOD            &kp SLASH              &none
-                                                                &sl 1             &THTL 4 ENTER           &to 0            &to 3                  &THTL 0 SPACE             &to 5
+&kp ESCAPE      &kp LG(LS(S))       &kp N7                      &kp N8            &kp N9                  &kp LC(A)        &none                 &none                     &kp ASTERISK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp TAB         &HMR LEFT_SHIFT N0  &HMR LEFT_CONTROL NUMBER_4  &HMR LEFT_ALT N5  &HMR LEFT_GUI NUMBER_6  &kp LC(LS(L))    &HMR RC(X) RC(C)      &HMR RIGHT_COMMAND EQUAL  &HMR RIGHT_ALT PLUS  &HMR RCTRL MINUS      &HMR RSHFT SEMICOLON   &kp SQT
+&sk LEFT_SHIFT  &kp LC(D)           &kp N1                      &kp N2            &kp N3                  &kp LA(DOWN)     &HMR LC(LS(V)) LC(V)  &none                     &kp COMMA            &kp PERIOD            &kp SLASH              &none
+                                                                &sl 1             &kp ENTER               &to 0            &to 3                 &kp SPACE                 &to 5
             >;
         };
 
@@ -165,10 +142,10 @@
         Symbols {
             label = "Sym";
             bindings = <
-&kp ESCAPE      &kp TILDE        &none        &none      &kp CARET   &none          &none         &kp AMPERSAND         &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp BACKSPACE
-&kp TAB         &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS          &kp EQUAL             &none
-&sk LEFT_SHIFT  &none            &none        &none      &none       &none          &none         &none                 &kp LESS_THAN          &kp GREATER_THAN   &none                 &kp GRAVE
-                                              &sl 1      &kp ENTER   &to 0          &TD           &kp SPACE             &to 5
+&kp ESCAPE      &kp TILDE        &none        &none      &kp CARET   &none          &none          &kp ASTERISK          &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp BACKSPACE
+&kp TAB         &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS          &kp EQUAL             &none
+&sk LEFT_SHIFT  &none            &none        &none      &none       &none          &none          &none                 &kp LESS_THAN          &kp GREATER_THAN   &none                 &kp GRAVE
+                                              &sl 1      &kp ENTER   &to 0          &TD            &kp SPACE             &to 5
             >;
         };
 
@@ -197,8 +174,8 @@
             bindings = <
 &HMR TILDE ESC  &kp Q         &kp W         &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O         &kp P                 &kp BSPC
 &kp TAB         &HMR LSHFT A  &HMR LCTRL S  &HMR LALT D  &HMR LGUI F  &kp G    &kp H  &HMR RGUI J  &HMR RALT K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &HMR EQUAL SQT
-&SCW            &kp Z         &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
-                                            &none        &lt 6 ENTER  &none    &none  &lt 8 SPACE  &none
+&sk LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT       &kp FSLH              &kp MINUS
+                                            &none        &kp ENTER    &to 6    &to 8  &kp SPACE    &none
             >;
         };
 
@@ -208,7 +185,7 @@
 &kp ESC  &none   &kp N7  &kp N8  &kp N9     &none    &none  &none      &none  &none  &none  &kp BSPC
 &none    &kp N0  &kp N4  &kp N5  &kp N6     &none    &none  &none      &none  &none  &none  &none
 &none    &none   &kp N1  &kp N2  &kp N3     &none    &none  &none      &none  &none  &none  &none
-                         &to 6   &kp ENTER  &none    &none  &kp SPACE  &to 7
+                         &none   &kp ENTER  &to 6    &to 7  &kp SPACE  &none
             >;
         };
     };
